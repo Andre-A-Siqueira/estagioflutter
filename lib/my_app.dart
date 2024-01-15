@@ -1,9 +1,11 @@
+//import 'package:estagioflutter/pages/login_page.dart';
 import 'package:estagioflutter/pages/login_page.dart';
+//import 'package:estagioflutter/pages/teste_tela.dart';
 import 'package:flutter/material.dart';
 //import 'package:google_fonts/google_fonts.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
-import 'pages/home_page.dart';
+//import 'pages/home_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -15,11 +17,13 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Gestão de Estoque',
         theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-            //primarySwatch: Colors.amber[600],
             useMaterial3: true,
-            textTheme: const TextTheme()),
+            textTheme: const TextTheme(),
+            colorScheme: ColorScheme.fromSeed(
+                    seedColor: const Color.fromARGB(255, 183, 181, 58))
+                .copyWith(background: const Color.fromRGBO(226, 217, 81, 1))),
         home: const LoginPage(
+            /*home: const TelaPrincipal(*/
             /*home: const MyHomePage(
             title: 'Gerenciador de estoque',
             style: TextStyle())
