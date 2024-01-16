@@ -12,34 +12,59 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Colors.amber[100],
+          backgroundColor: const Color.fromARGB(157, 25, 98, 215),
           body: SizedBox(
             width: double.infinity,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  height: 100,
+                  height: 50,
                 ),
-                const Icon(
-                  Icons.person,
-                  size: 160,
-                  color: Colors.blueAccent,
-                ),
-                Container(
-                    width: double.infinity,
-                    margin: const EdgeInsets.symmetric(
-                      horizontal: 30,
+                Row(
+                  children: [
+                    Expanded(child: Container()),
+                    Expanded(
+                      flex: 8,
+                      child: Image.network(
+                          "https://hermes.digitalinnovation.one/assets/diome/logo.png"),
                     ),
-                    height: 30,
-                    alignment: Alignment.center,
-                    child: const Row(
-                      //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Expanded(flex: 2, child: Text("Informe seu email")),
-                        Expanded(flex: 3, child: Text("Email")),
-                      ],
-                    )),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                const Text(
+                  "Já tem cadastro?",
+                  style: TextStyle(
+                      fontSize: 26,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white),
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  "Faça seu login",
+                  style: TextStyle(fontSize: 14, color: Colors.white),
+                ),
+                const SizedBox(height: 40),
+                //! <=======================Estou trabalhando Aqui========================>
+                Container(
+                  width: double.infinity,
+                  //color: Colors.cyan,
+                  margin: const EdgeInsets.symmetric(
+                    horizontal: 30,
+                  ),
+                  height: 30,
+                  alignment: Alignment.center,
+                  child: const TextField(
+                    decoration: InputDecoration(
+                        hintText: "Email",
+                        hintStyle: TextStyle(color: Colors.white),
+                        prefixIcon: Icon(
+                          Icons.person,
+                          color: Color.fromARGB(255, 148, 81, 158),
+                        )),
+                  ),
+                ),
+                //! <=======================Estou trabalhando Aqui========================>
                 Container(
                   width: double.infinity,
                   margin: const EdgeInsets.symmetric(
@@ -48,9 +73,48 @@ class _LoginPageState extends State<LoginPage> {
                   height: 30,
                   child: const Row(
                     children: [
-                      Expanded(flex: 2, child: Text("Informe a senha:")),
-                      Expanded(flex: 3, child: Text("Senha:")),
+                      Expanded(
+                          flex: 2,
+                          child: Text(
+                            "Informe a senha:",
+                            style: TextStyle(color: Colors.white),
+                          )),
+                      Expanded(
+                          flex: 3,
+                          child: Text(
+                            "Senha:",
+                            style: TextStyle(color: Colors.white),
+                          )),
                     ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Container(
+                  width: double.infinity,
+                  margin: const EdgeInsets.symmetric(
+                    horizontal: 30,
+                  ),
+                  alignment: Alignment.center,
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: TextButton(
+                      onPressed: () {},
+                      style: ButtonStyle(
+                          shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20))),
+                          backgroundColor: MaterialStateProperty.all(
+                              const Color.fromARGB(255, 148, 81, 158))),
+                      child: const Text(
+                        "ENTRAR",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400),
+                      ),
+                    ),
                   ),
                 ),
                 Expanded(child: Container()),
@@ -58,24 +122,25 @@ class _LoginPageState extends State<LoginPage> {
                   margin: const EdgeInsets.symmetric(
                     horizontal: 30,
                   ),
-                  color: const Color.fromARGB(255, 78, 173, 236),
                   height: 30,
-                  child: const Text("Cadastrar"),
-                ),
-                const SizedBox(
-                  height: 70,
+                  child: const Text(
+                    "Esqueci minha senha",
+                    style: TextStyle(
+                        color: Colors.yellow, fontWeight: FontWeight.w400),
+                  ),
                 ),
                 Container(
-                  width: double.infinity,
-                  margin:
-                      const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-                  color: Colors.green,
+                  margin: const EdgeInsets.symmetric(
+                    horizontal: 30,
+                  ),
                   height: 30,
-                  child: const Text("Botão"),
+                  child: const Text(
+                    "Criar conta",
+                    style: TextStyle(
+                        color: Colors.green, fontWeight: FontWeight.w400),
+                  ),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+                Expanded(child: Container()),
               ],
             ),
           )),
