@@ -107,7 +107,7 @@ class _MainPageState extends State<MainPage> {
             ),
             BottomNavigationBar(
                 onTap: (value) {
-                  controller.jumpToPage(value);;;
+                  controller.jumpToPage(value);
                 },
                 currentIndex: posicaoPagina,
                 items: const [
