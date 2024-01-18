@@ -1,3 +1,4 @@
+import 'package:estagioflutter/pages/main_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -8,8 +9,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  var emailController = TextEditingController();
-  var senhaController = TextEditingController();
+  var emailController = TextEditingController(text: "email@email.com");
+  var senhaController = TextEditingController(text: "123");
 
   bool isObscureText = true;
 
@@ -128,7 +129,6 @@ class _LoginPageState extends State<LoginPage> {
                     const SizedBox(
                       height: 30,
                     ),
-                    //! <=======================Estou trabalhando Aqui========================>
                     Container(
                       width: double.infinity,
                       margin: const EdgeInsets.symmetric(
@@ -139,8 +139,19 @@ class _LoginPageState extends State<LoginPage> {
                         width: double.infinity,
                         child: TextButton(
                           onPressed: () {
-                            debugPrint(emailController.text);
-                            debugPrint(senhaController.text);
+                            if (emailController.text.trim() ==
+                                    "email@email.com" &&
+                                senhaController.text.trim() == "123") {
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const MainPage()));
+                            } else {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                      content:
+                                          Text('Erro ao efetuar o login')));
+                            }
                           },
                           style: ButtonStyle(
                               shape: MaterialStateProperty.all(
@@ -158,7 +169,6 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
-                    //! <=======================Estou trabalhando Aqui========================>
                     Expanded(child: Container()),
                     Container(
                       margin: const EdgeInsets.symmetric(
