@@ -18,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: const Color.fromARGB(157, 25, 98, 215),
+          backgroundColor: const Color.fromARGB(157, 63, 60, 13),
           body: SingleChildScrollView(
             child: ConstrainedBox(
               constraints:
@@ -36,8 +36,8 @@ class _LoginPageState extends State<LoginPage> {
                         Expanded(child: Container()),
                         Expanded(
                           flex: 8,
-                          child: Image.network(
-                              "https://hermes.digitalinnovation.one/assets/diome/logo.png"),
+                          child:
+                              Image.asset("lib/assets/gestao_de_estoque.png"),
                         ),
                       ],
                     ),
@@ -61,6 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                       margin: const EdgeInsets.symmetric(
                         horizontal: 30,
                       ),
+
                       height: 30,
                       alignment: Alignment.center,
                       child: TextField(
@@ -72,14 +73,16 @@ class _LoginPageState extends State<LoginPage> {
                         decoration: const InputDecoration(
                             contentPadding: EdgeInsets.only(top: 0),
                             enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.purple)),
+                                borderSide: BorderSide(
+                                    color: Color.fromARGB(255, 64, 43, 68))),
                             focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.purple)),
+                                borderSide: BorderSide(
+                                    color: Color.fromARGB(255, 64, 43, 68))),
                             hintText: "Email",
                             hintStyle: TextStyle(color: Colors.white),
                             prefixIcon: Icon(
                               Icons.person,
-                              color: Color.fromARGB(255, 148, 81, 158),
+                              color: Color.fromARGB(255, 64, 43, 68),
                             )),
                       ),
                     ),
@@ -102,14 +105,16 @@ class _LoginPageState extends State<LoginPage> {
                         decoration: InputDecoration(
                             contentPadding: const EdgeInsets.only(top: 0),
                             enabledBorder: const UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.purple)),
+                                borderSide: BorderSide(
+                                    color: Color.fromARGB(255, 64, 43, 68))),
                             focusedBorder: const UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.purple)),
+                                borderSide: BorderSide(
+                                    color: Color.fromARGB(255, 64, 43, 68))),
                             hintText: "Senha",
                             hintStyle: const TextStyle(color: Colors.white),
                             prefixIcon: const Icon(
                               Icons.lock,
-                              color: Color.fromARGB(255, 148, 81, 158),
+                              color: Color.fromARGB(255, 64, 43, 68),
                             ),
                             suffixIcon: InkWell(
                               onTap: () {
@@ -121,7 +126,7 @@ class _LoginPageState extends State<LoginPage> {
                                 isObscureText
                                     ? Icons.visibility_off
                                     : Icons.visibility,
-                                color: const Color.fromARGB(255, 148, 81, 158),
+                                color: const Color.fromARGB(255, 64, 43, 68),
                               ),
                             )),
                       ),
@@ -158,7 +163,7 @@ class _LoginPageState extends State<LoginPage> {
                                   RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(20))),
                               backgroundColor: MaterialStateProperty.all(
-                                  const Color.fromARGB(255, 148, 81, 158))),
+                                  const Color.fromARGB(255, 64, 43, 68))),
                           child: const Text(
                             "ENTRAR",
                             style: TextStyle(
@@ -178,7 +183,8 @@ class _LoginPageState extends State<LoginPage> {
                       child: const Text(
                         "Esqueci minha senha",
                         style: TextStyle(
-                            color: Colors.yellow, fontWeight: FontWeight.w400),
+                            color: Colors.yellowAccent,
+                            fontWeight: FontWeight.w400),
                       ),
                     ),
                     Container(
@@ -189,7 +195,8 @@ class _LoginPageState extends State<LoginPage> {
                       child: const Text(
                         "Criar conta",
                         style: TextStyle(
-                            color: Colors.green, fontWeight: FontWeight.w400),
+                            color: Colors.greenAccent,
+                            fontWeight: FontWeight.w400),
                       ),
                     ),
                     Expanded(child: Container()),

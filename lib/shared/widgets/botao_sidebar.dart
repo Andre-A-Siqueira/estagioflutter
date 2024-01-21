@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class BotaoSideBarTeste00 extends StatelessWidget {
   final String titulo;
 
-  BotaoSideBarTeste00({required this.titulo});
+  const BotaoSideBarTeste00({super.key, required this.titulo});
 
   @override
   Widget build(BuildContext context) {

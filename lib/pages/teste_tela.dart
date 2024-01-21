@@ -1,4 +1,4 @@
-import 'package:estagioflutter/widgets/botao_tela.dart';
+import 'package:estagioflutter/shared/widgets/botao_tela.dart';
 import 'package:flutter/material.dart';
 
 class TelaPrincipal extends StatelessWidget {

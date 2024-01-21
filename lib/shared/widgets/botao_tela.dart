@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 class BotaoTela extends StatelessWidget {
   final String titulo;
 
-  BotaoTela(
-    this.titulo,
-  );
+  BotaoTela(this.titulo, {super.key});
 
   @override
   Widget build(BuildContext context) {
