@@ -32,7 +32,7 @@ class Pagina1PageState extends State<Pagina1Page> {
                 size: 36,
               ),
               SizedBox(
-                height: 3;0,
+                height: 30,
               ),
               Text(
                 'Conheça as telas ao lado',
