@@ -4,14 +4,52 @@ class Pagina1Page extends StatefulWidget {
   const Pagina1Page({super.key});
 
   @override
-  State<Pagina1Page> createState() => _Pagina1PageState();
+  Pagina1PageState createState() => Pagina1PageState();
 }
 
-class _Pagina1PageState extends State<Pagina1Page> {
+class Pagina1PageState extends State<Pagina1Page> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blueGrey,
+    return Stack(
+      children: [
+        Container(
+          color: Colors.blueGrey,
+        ),
+        const Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Deslize para a esquerda',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                ),
+              ),
+              Icon(
+                Icons.arrow_back,
+                color: Colors.white,
+                size: 36,
+              ),
+              SizedBox(
+                height: 3;0,
+              ),
+              Text(
+                'Conheça as telas ao lado',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                ),
+              ),
+              Icon(
+                Icons.arrow_forward,
+                color: Colors.white,
+                size: 36,
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

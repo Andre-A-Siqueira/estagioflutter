@@ -1,5 +1,4 @@
 import 'package:estagioflutter/pages/cadastrar_produtos.dart';
-import 'package:estagioflutter/pages/dados_cadastrais.dart';
 import 'package:estagioflutter/pages/login_page.dart';
 import 'package:estagioflutter/pages/pagina1.dart';
 import 'package:flutter/material.dart';
@@ -28,23 +27,6 @@ class _MainPageState extends State<MainPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                InkWell(
-                  child: Container(
-                      padding: const EdgeInsets.symmetric(vertical: 5),
-                      width: double.infinity,
-                      child: const Text("Dados Cadastráis")),
-                  onTap: () {
-                    Navigator.pop(context);
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const DadosCadastraisPage()));
-                  },
-                ),
-                const Divider(),
-                const SizedBox(
-                  height: 10,
-                ),
                 InkWell(
                   child: Container(
                       padding: const EdgeInsets.symmetric(vertical: 5),

@@ -19,15 +19,12 @@ class BotaoSideBarTeste00 extends StatelessWidget {
                 width: double.infinity,
                 child: Text(titulo),
               ),
-              onTap: () {
-                // Adicione aqui a lógica que você deseja executar ao tocar no item
-              },
+              onTap: () {},
             ),
             const Divider(),
             const SizedBox(
               height: 10,
             ),
-            // Adicione outros itens do Drawer conforme necessário
           ],
         ),
       ),

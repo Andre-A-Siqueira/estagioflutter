@@ -11,7 +11,6 @@ class BotaoTela extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: ElevatedButton(
         onPressed: () {
-          // Adicione aqui a navegação para a tela correspondente
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text('Navegar para $titulo')),
           );

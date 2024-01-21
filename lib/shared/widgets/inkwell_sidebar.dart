@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 class InkwellSideBar extends StatelessWidget {
   final String texto;
-  final Widget rota; // Ajuste o tipo para Widget ou o tipo da classe desejada
-  //get rotas => rota.toString();
+  final Widget rota;
   const InkwellSideBar({super.key, required this.texto, required this.rota});
 
   @override
